@@ -14,15 +14,36 @@
                 {% include "partials/input_form.html" %}
             </div>
             
-            <input type="checkbox" name="see_full_list" class="see_full_list_input" value="closed" id="see_full_list_input">
-
             <div class="main-table-container">
-                {% autoescape off %}
-                    {{resultado}}
-                {% endautoescape %}                 
+                <div class="table-title-container">
+                    <span class="table-title">Todas as transações</span>
+                </div>
+                <div class="table-continer">
+                    {% autoescape off %}
+                        {{resultado}}
+                    {% endautoescape %}                 
+                </div>
+            </div>
+
+
+            <div class="main-filters-containers">
+                <button type="submit" class="ui button" name="button_table_summ" value="button_table_summ" onclick="teste()">Button</button>
             </div>
 
         </div>
     </div>
+    
+    <script>
+        function teste() {
+           
+            $.ajax({
+                type: 'GET',
+                url: 'teste/',
+                data: {},
+                success: function(data){ console.log('deu certo') }
+            })
+        }
+    </script>
+
 </body>
 </html>

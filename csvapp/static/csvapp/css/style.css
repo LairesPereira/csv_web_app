@@ -96,23 +96,6 @@ h6 {
     padding: 3rem;
 }
 
-.main-table-container {
-    max-height: 50rem;
-    overflow: scroll;
-    display: flex;
-    margin: 0 auto;
-}
-
-.main-table-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.main-table-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
 .see_full_list_input {
     margin: 4rem;
 }

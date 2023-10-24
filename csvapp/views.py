@@ -4,6 +4,10 @@ from .form import UploadFileForm
 from .handdle_upload import handle_uploaded_file
 # Create your views here.
 
+def teste(request):
+      print('feito')
+      return HttpResponse('Olá')
+
 def home(request):
     if request.method == 'POST':
             form = UploadFileForm(request.POST, request.FILES)
