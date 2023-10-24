@@ -8,7 +8,8 @@ def home(request):
     if request.method == 'POST':
             form = UploadFileForm(request.POST, request.FILES)
             result = handle_uploaded_file(request.FILES)
-            return render(request, 'pages/home.html', {'resultado': result })
+            full_table = False
+            return render(request, 'pages/home.html', { 'resultado': result, 'full_table': full_table })
     else:
          form = UploadFileForm()
     return render(request, 'pages/home.html', {'form': form})

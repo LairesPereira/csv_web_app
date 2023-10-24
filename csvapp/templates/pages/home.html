@@ -14,13 +14,15 @@
                 {% include "partials/input_form.html" %}
             </div>
             
-            <div>
+            <input type="checkbox" name="see_full_list" class="see_full_list_input" value="closed" id="see_full_list_input">
+
+            <div class="main-table-container">
                 {% autoescape off %}
                     {{resultado}}
-                {% endautoescape %}
+                {% endautoescape %}                 
             </div>
+
         </div>
-      
     </div>
 </body>
 </html>
