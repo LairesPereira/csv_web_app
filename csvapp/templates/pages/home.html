@@ -1,23 +1,29 @@
 {% include "partials/head.html" %}
 
-
 <body>
-    <div class="main-container">
-        {% include "partials/header.html" %}
+    <div class="main-app">
+        <div class="main-container app-container">
+            {% include "partials/header.html" %}
+        </div>
 
-        <div class="main-app-container">
-            <div class="input-area-container">
-               Input area
+        <div class="main-section">
+            <div class="general-info-container">
+                <span>Drop your NuBank CSV file to see more details</span>
             </div>
-            <div class="main-display-area-container">
-                display area
+            <div class="input-container">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="myfile">
+                    <button type="submit">Upload</button>
+                </form>
             </div>
-            <div class="main-footer-container">
-                <div>
-                    foot
-                </div>
+            <div>
+                {% autoescape off %}
+                    {{resultado}}
+                {% endautoescape %}
             </div>
         </div>
+      
     </div>
 </body>
 </html>
