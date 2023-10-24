@@ -11,12 +11,9 @@
                 <span>Drop your NuBank CSV file to see more details</span>
             </div>
             <div class="input-container">
-                <form method="POST" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <input type="file" name="myfile">
-                    <button type="submit">Upload</button>
-                </form>
+                {% include "partials/input_form.html" %}
             </div>
+            
             <div>
                 {% autoescape off %}
                     {{resultado}}
