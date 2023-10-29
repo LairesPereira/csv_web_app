@@ -2,6 +2,6 @@
 
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="myfile">
+    <input type="file" name="myfile" accept=".csv" required>
     <button type="submit">Upload</button>
 </form>

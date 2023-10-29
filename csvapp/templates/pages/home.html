@@ -7,43 +7,30 @@
         </div>
 
         <div class="main-section">
-            <div class="general-info-container">
-                <span>Drop your NuBank CSV file to see more details</span>
-            </div>
-            <div class="input-container">
-                {% include "partials/input_form.html" %}
-            </div>
-            
-            <div class="main-table-container">
-                <div class="table-title-container">
-                    <span class="table-title">Todas as transações</span>
+            {% include "partials/side.html" %}
+            <div class="main-app-info-container">
+                <span class="text-information">Drop your NuBank CSV file to see more details</span>
+                <div class="input-container">
+                    {% include "partials/input_form.html" %}
                 </div>
-                <div class="table-continer">
-                    {% autoescape off %}
-                        {{resultado}}
-                    {% endautoescape %}                 
+                <div class="main-table-container">
+                    <div class="table-title-container">
+                        <span class="table-title">{{table_title}}</span>
+                    </div>
+                    <div class="table-continer">
+                        {% autoescape off %}
+                            {{resultado}}
+                        {% endautoescape %}                 
+                    </div>
+                    
                 </div>
+                <div class="main-table-container">
+                    <div class="table-title-container">
+                        <span class="table-title" id="filtered_table_title"></span>
+                    </div>
+                    <div class="table-continer-2" id="table-continer-2"></div>    
             </div>
-
-
-            <div class="main-filters-containers">
-                <button type="submit" class="ui button" name="button_table_summ" value="button_table_summ" onclick="teste()">Button</button>
-            </div>
-
         </div>
     </div>
-    
-    <script>
-        function teste() {
-           
-            $.ajax({
-                type: 'GET',
-                url: 'teste/',
-                data: {},
-                success: function(data){ console.log('deu certo') }
-            })
-        }
-    </script>
-
 </body>
 </html>
