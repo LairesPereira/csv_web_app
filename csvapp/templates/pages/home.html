@@ -1,20 +1,35 @@
 {% include "partials/head.html" %}
 
 <body>
-    <div class="main-container">
-        {% include "partials/header.html" %}
+    <div class="main-app">
+        <div class="main-container app-container">
+            {% include "partials/header.html" %}
+        </div>
 
-        <div class="main-app-container">
-            <div class="input-area-container">
-               Input area
-            </div>
-            <div class="main-display-area-container">
-                display area
-            </div>
-            <div class="main-footer-container">
-                <div>
-                    foot
+        <div class="main-section">
+            {% include "partials/side.html" %}
+            <div class="main-app-info-container">
+                <span class="text-information">Drop your NuBank CSV file to see more details</span>
+                <div class="input-container">
+                    {% include "partials/input_form.html" %}
                 </div>
+                <div class="table-title-container">
+                    <span class="table-title">{{table_title}}</span>
+                </div>
+                <div class="main-table-container">
+                    
+                    <div class="table-continer">
+                        {% autoescape off %}
+                            {{resultado}}
+                        {% endautoescape %}                 
+                    </div>
+                    
+                </div>
+                <div class="table-title-container">
+                    <span class="table-title" id="filtered_table_title"></span>
+                </div>
+                <div class="main-table-container">
+                    <div class="table-continer-2" id="table-continer-2"></div>    
             </div>
         </div>
     </div>
