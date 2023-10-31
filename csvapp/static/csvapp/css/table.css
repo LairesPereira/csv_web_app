@@ -9,7 +9,7 @@
 .main-table-container {
     max-height: 50rem;
     overflow: scroll;
-    margin: 0 auto;
+    margin: 3rem;
 }
 
 .main-table-container::-webkit-scrollbar {

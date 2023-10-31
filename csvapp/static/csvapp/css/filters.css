@@ -18,6 +18,7 @@
 }
 
 .input-filters {
+    margin-top: 1rem;
     height: 3rem;
     width: 100%;
     padding: 5px;
@@ -36,6 +37,23 @@
     outline: none;
 }
 
+.checkbox_area {
+  display: flex;
+  margin: 2rem auto;
+  margin-top: 0;
+}
+
+.send_or_recived_input_filters_description {
+  color: #FFFFFF;
+}
+
+.individual_checkbox_area {
+  margin: 1rem;
+}
+
+.individual_input_text_area {
+  margin: 1rem;
+}
 
 /* file upload button */
 input[type="file"]::file-selector-button {

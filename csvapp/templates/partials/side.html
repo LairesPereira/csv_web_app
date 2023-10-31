@@ -1,7 +1,21 @@
 {% load static %}
+
 <div class="side-section">
     <div class="main-filters-containers">
-        <span class="filter-title">Digite um nome para buscar transações específicas</span>
-        <input type="text" name="name_to_filter" class="input-filters" id="name_to_filter_input" onchange="name_to_filter()">
+        <div class="individual_input_text_area">
+            <span class="filter-title">Buscar transações específicas</span>
+            <input type="text" name="name_to_filter" class="input-filters" id="name_to_filter_input" onchange="name_to_filter()">
+        </div>
+        <div class="checkbox_area">
+            <div class="individual_checkbox_area">
+                <input type="checkbox" name="send_or_recived" class="send_or_recived_input_filters" id="send_checkbox" checked>
+                <label for="send_or_recived_input" class="send_or_recived_input_filters_description">Enviadas</label>
+            </div>
+            <div class="individual_checkbox_area">
+                <input type="checkbox" name="send_or_recived" class="send_or_recived_input_filters" id="recived_checkbox" checked>
+                <label for="send_or_recived_input" class="send_or_recived_input_filters_description">Recebidas</label>
+            </div>
+        </div>
     </div>
+    
 </div>

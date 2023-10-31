@@ -3,6 +3,9 @@ import pandas as pd
 user_file = []
 css_class = 'comicGreen'
 
+test_file = {
+        'myfile': '/Users/Dev/Documents/10_nubank_outubro_2023.csv'
+}
 # IMPORTANT
 # Always create and use a copy of original df stored in user_file
 def handle_uploaded_file(file): 
@@ -21,3 +24,5 @@ def read_strict(name):
         return new.to_html(classes=css_class)
 
 
+
+# handle_uploaded_file(test_file)
