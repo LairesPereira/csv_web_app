@@ -16,6 +16,8 @@ def read_strict(name):
         user_file_copy = user_file[0]
         mask = user_file_copy['Descrição'].str.contains(name)
         new = user_file_copy.loc[mask]
+        if new.empty:
+                return 'empty'
         return new.to_html(classes=css_class)
 
 

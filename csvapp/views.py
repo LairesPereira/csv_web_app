@@ -5,6 +5,8 @@ from .handdle_upload import handle_uploaded_file, read_strict
 
 def name_to_filter(request):
         filtered_table = read_strict(request.GET.get('description_filter'))
+        if filtered_table == 'empty':
+              return JsonResponse({ 'filtered_table': 'Nenhuma transação encontrada'})
         return JsonResponse({'filtered_table': filtered_table,})
 
 def home(request):

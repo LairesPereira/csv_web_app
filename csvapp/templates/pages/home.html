@@ -13,10 +13,11 @@
                 <div class="input-container">
                     {% include "partials/input_form.html" %}
                 </div>
+                <div class="table-title-container">
+                    <span class="table-title">{{table_title}}</span>
+                </div>
                 <div class="main-table-container">
-                    <div class="table-title-container">
-                        <span class="table-title">{{table_title}}</span>
-                    </div>
+                    
                     <div class="table-continer">
                         {% autoescape off %}
                             {{resultado}}
@@ -24,10 +25,10 @@
                     </div>
                     
                 </div>
+                <div class="table-title-container">
+                    <span class="table-title" id="filtered_table_title"></span>
+                </div>
                 <div class="main-table-container">
-                    <div class="table-title-container">
-                        <span class="table-title" id="filtered_table_title"></span>
-                    </div>
                     <div class="table-continer-2" id="table-continer-2"></div>    
             </div>
         </div>

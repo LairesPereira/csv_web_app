@@ -4,7 +4,6 @@ function name_to_filter() {
     .then((data) => {
         document.getElementById('filtered_table_title').innerHTML = 
         'Transações realizadas para: ' + document.getElementById('name_to_filter_input').value
-        
         document.getElementById('table-continer-2').innerHTML = data.filtered_table
     })
 }
