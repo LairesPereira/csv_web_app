@@ -4,11 +4,21 @@ from .form import UploadFileForm
 from .handdle_upload import handle_uploaded_file, read_strict
 
 def name_to_filter(request):
-        print(request.GET.get('send_checkbox'))
-        filtered_table = read_strict(request.GET.get('description_filter'))
+        filtered_table = read_strict({
+                'send_checkbox':request.GET.get('send_checkbox'),
+                'recived_checkbox': request.GET.get('send_checkbox'),
+                'name_filter': request.GET.get('name_filter')
+        })
+
         if filtered_table == 'empty':
               return JsonResponse({ 'filtered_table': 'Nenhuma transação encontrada'})
-        return JsonResponse({'filtered_table': filtered_table,})
+        return JsonResponse(
+                {
+                        'filtered_table': filtered_table['table'],
+                        'total_transactions': filtered_table['total_transactions'],
+                        'transactions_sum': filtered_table['transactions_sum']     
+                }
+        )
 
 def home(request):
     if request.method == 'POST':
