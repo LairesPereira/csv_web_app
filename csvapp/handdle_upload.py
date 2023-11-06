@@ -48,7 +48,7 @@ def read_strict(urlParams):
 
         new = df.loc[mask_name]
         
-        transactions_full_sum = new['Valor'].sum()* -1
+        transactions_full_sum = new['Valor'].sum() * -1
 
         final_info['table'] = new.to_html(classes=css_class)
         final_info['total_transactions'] = new.shape[0]
